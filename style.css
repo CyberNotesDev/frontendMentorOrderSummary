@@ -1,0 +1,168 @@
+* {
+    font-family: 'Red Hat Display', sans-serif;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+@media screen and (max-width: 675px) {
+    body {
+        background-image: url("./images/pattern-background-mobile.svg");
+        background-repeat: no-repeat;
+    }
+
+    main {
+        margin: 0 2em;
+        width: 375px;
+    }
+
+    .hero {
+        width: 375px;
+    }
+
+    .plan, button {
+        width: 100% !important;
+    }
+
+    .details .details__paragraph {
+        width: 265px;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+    background-color: var(--pale-blue);
+
+    height: 100vh;
+}
+
+main {
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--very-pale-blue);
+    margin-bottom: 2em;
+    box-shadow: 0 10px 20px hsl(225, 100%, 88%);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 1.5em 1.5em;
+}
+
+.details__paragraph {
+    color: var(--desaturated-blue);
+}
+
+.details__title {
+    margin-bottom: 18px;
+    color: var(--dark-blue);
+}
+
+.details__paragraph {
+    font-size: 16px;
+    width: 350px;
+    margin: 0 auto;
+    line-height: 1.8em;
+}
+
+.details__title, .details__paragraph {
+    text-align: center;
+}
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-radius: 10px;
+    margin: 2em auto;
+    padding: 15px;
+    width: 90%;
+    background-color: hsla(224, 23%, 55%, 0.05);
+}
+
+.plan__annual {
+    display: flex;
+    align-items: center;
+}
+
+.plan__annual--icon {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.plan__annual--subscription p:first-child {
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+}
+
+.plan__annual--subscription p:last-child {
+    color: var(--desaturated-blue);
+}
+
+.plan__annual--change {
+    text-decoration: underline;
+    color: var(--bright-blue);
+}
+
+.plan__annual--change:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(245, 71%, 55%);
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 5px 25px 5px hsl(225, 100%, 88%);
+    width: 90%;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: hsl(245, 71%, 55%);
+}
+
+.details__cancel {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 1.5em;
+}
+
+.details__cancel:hover {
+    color: var(--dark-blue);
+}
+
+.attribution { font-size: 14px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
